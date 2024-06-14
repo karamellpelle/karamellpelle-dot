@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "karamellpelle-vim"]
+	path = karamellpelle-vim
+	url = git@github.com:karamellpelle/karamellpelle-vim.git
