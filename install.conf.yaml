@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      relink: true
+- clean: ['~']
+- link:
+    ~/.vimrc: karamellpelle-vim/vimrc
+    ~/.vim: karamellpelle-vim/vim
+    ~/.config/nvim: karamellpelle-vim/nvim
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
