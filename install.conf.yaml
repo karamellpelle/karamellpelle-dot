@@ -3,6 +3,7 @@
       relink: true
 - clean: ['~']
 - link:
+    ~/.gitconfig: gitconfig
     ~/.vimrc: karamellpelle-vim/vimrc
     ~/.vim: karamellpelle-vim/vim
     ~/.config/nvim: karamellpelle-vim/nvim

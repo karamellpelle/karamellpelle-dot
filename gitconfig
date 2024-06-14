@@ -1,0 +1,54 @@
+# This is Git's per-user configuration file.
+[user] # Please adapt and uncomment the following lines:
+    name = karamellpelle
+    email = karamellpelle@hotmail.com
+    signingkey = 6EC3DB6615071D1D6A59E5454200A70212943323
+
+[color]
+    ui = true
+#[color "diff-highlight"]
+#   oldNormal = red bold
+#   oldHighlight = red bold 52
+#   newNormal = green bold
+#   newHighlight = green bold 22
+#[color "diff"]
+#   meta = 11
+#   frag = magenta bold
+#   func = 146 bold
+#   commit = yellow bold
+#   old = red bold
+#   new = green bold
+#   whitespace = red reverse
+
+[core]
+    #pager = delta
+    pager = PAGER=less delta
+
+[init]
+    defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[alias]
+l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
+ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+#l = log --graph --oneline --decorate
+#ll = log --graph --oneline --decorate --branches --tags
+#lll = log --graph --oneline --decorate --all
