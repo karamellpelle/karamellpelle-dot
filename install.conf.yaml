@@ -6,5 +6,14 @@
     ~/.vimrc: karamellpelle-vim/vimrc
     ~/.vim: karamellpelle-vim/vim
     ~/.config/nvim: karamellpelle-vim/nvim
+    ~/.zprezto: prezto
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: 
+        force: true
+        path: prezto/runcoms/zshrc
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
