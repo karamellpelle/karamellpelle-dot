@@ -4,6 +4,7 @@
 - clean: ['~']
 - link:
     ~/.gitconfig: gitconfig
+    ~/.stack/config.yaml: stack/config.yaml
     ~/.vimrc: karamellpelle-vim/vimrc
     ~/.vim: karamellpelle-vim/vim
     ~/.config/nvim: karamellpelle-vim/nvim

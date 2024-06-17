@@ -1,7 +1,5 @@
 # karamellpelle-dot
 
-My dotfiles with submodules linked into home folder
-
 ~~~bash
 $ # make sure we use zsh
 $ sudo chsh --shell /usr/bin/zsh
