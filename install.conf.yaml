@@ -1,7 +1,13 @@
 - defaults:
     link:
       relink: true
+
+- create:
+    - ~/.stack
+    - ~/.config
+
 - clean: ['~']
+
 - link:
     ~/.gitconfig: gitconfig
     ~/.stack/config.yaml: stack/config.yaml
