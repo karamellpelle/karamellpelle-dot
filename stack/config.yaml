@@ -19,3 +19,5 @@ templates:
 # Rendition) control codes (in decimal). Use "stack ls stack-colors --basic"
 # to see the current sequence.
 # stack-colors: STYLES
+urls:
+  latest-snapshot: https://stackage-haddock.haskell.org/snapshots.json
