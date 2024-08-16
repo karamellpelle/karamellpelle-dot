@@ -9,3 +9,6 @@ $ # install
 $ cd Source/karamellpelle-dot/
 $ ./install
 ~~~
+
+## Submodules
+Update submodules: `git submodule update --remote --merge <path to submodule>` (ignore `<path to submodule>` to update all)
