@@ -6,7 +6,3 @@
 	path = karamellpelle-vim
 	url = ../karamellpelle-vim.git
 	branch = master
-[submodule "prezto"]
-	path = prezto
-	url = ../prezto.git
-	branch = master
