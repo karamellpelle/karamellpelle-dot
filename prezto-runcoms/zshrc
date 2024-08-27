@@ -28,7 +28,28 @@ prompt powerlevel10k
 #compinit
 #promptinit
 
+
+################################################################################
+# use NeoVim by default
+if [ -x "$(command -v nvim)" ]; then
+  alias vim=nvim
+fi
+
+################################################################################
+# if we have ghcup installed, add executables
+if [[ -n "$GHCUP_INSTALL_BASE_PREFIX" ]]; then
+  path=(
+    /c/ghcup/bin
+    "$APPDATA/local/bin"
+    $path
+  )
+fi
+
+################################################################################
+#
 setopt completealiases
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -15,7 +15,11 @@ fi
 
 #typeset -U path
 
-EDITOR=(vim)
 path=($path ~/.local/bin ~/source/git-hg/bin)
 
-#PAGER=vimpager
+export SSH_SK_HELPER="/mnt/c/Program Files/OpenSSH/ssh-sk-helper.exe"
+
+################################################################################
+#
+export EDITOR="vim"
+export VISUAL="vim"

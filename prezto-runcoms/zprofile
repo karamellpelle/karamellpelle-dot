@@ -49,9 +49,13 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/{,s}bin(N)
+  $HOME/.local/bin
+  $HOME/.fzf/bin
+  #$HOME/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  /usr/lib/wsl/lib
+  /mnt/c/Program Files/OpenSSH/
   $path
 )
 

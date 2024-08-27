@@ -17,11 +17,13 @@
     ~/.zprezto: prezto
     ~/.zlogin: prezto-runcoms/zlogin
     ~/.zlogout: prezto-runcoms/zlogout
+    ~/.zprofile: prezto-runcoms/zprofile
     ~/.zpreztorc: prezto-runcoms/zpreztorc
     ~/.zshenv: prezto-runcoms/zshenv
     ~/.zshrc: 
         force: true
         path: prezto-runcoms/zshrc
+    ~/.p10k.zsh: prezto-runcoms/p10k.zsh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
