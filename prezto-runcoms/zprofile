@@ -35,6 +35,14 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
+# open in WSL environments
+# https://superuser.com/a/1749811
+if [ -e "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
+    alias open=wslview
+fi
+#
+#
+#
 #
 # Paths
 #
