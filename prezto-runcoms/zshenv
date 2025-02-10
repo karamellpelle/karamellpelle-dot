@@ -15,9 +15,9 @@ fi
 
 #typeset -U path
 
-path=($path ~/.local/bin ~/source/git-hg/bin)
-
 # set ssh-sk-helper if we are running WSL
+# in order to deploy residental keys the first time (`ssh-keygen -K`), 
+# you will need to run WSL as Administrator ..
 if uname -r|grep -iq 'Microsoft' ; then
   export SSH_SK_HELPER="/mnt/c/Program Files/OpenSSH/ssh-sk-helper.exe"
 fi
