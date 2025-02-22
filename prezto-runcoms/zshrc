@@ -32,6 +32,7 @@ prompt powerlevel10k
 # use NeoVim by default
 if [ -x "$(command -v nvim)" ]; then
   alias vim=nvim
+  export GIT_EDITOR=nvim
 fi
 
 ################################################################################

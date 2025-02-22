@@ -15,8 +15,6 @@ fi
 
 #typeset -U path
 
-path=($path ~/.local/bin ~/source/git-hg/bin)
-
 # set ssh-sk-helper if we are running WSL
 if uname -r|grep -iq 'Microsoft' ; then
   export SSH_SK_HELPER="/mnt/c/Program Files/OpenSSH/ssh-sk-helper.exe"
@@ -26,3 +24,5 @@ fi
 #
 export EDITOR="vim"
 export VISUAL="vim"
+
+# TODO: if nvim: export GIT_EDITOR="nvim"

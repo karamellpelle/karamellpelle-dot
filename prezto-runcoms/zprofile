@@ -9,8 +9,21 @@
 # Browser
 #
 
-if [[ -z "$BROWSER" && "$OSTYPE" == darwin* ]]; then
+# 'open' command
+if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
+fi
+
+if [[ "$OSTYPE" == linux-gnu ]]; then
+  alias open=xdg-open
+  export BROWSER='xdg-open'
+fi
+
+# open in WSL environments
+# https://superuser.com/a/1749811
+if [ -e "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
+    alias open=wslview
+    export BROWSER='wslview'
 fi
 
 #
@@ -35,11 +48,6 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
-# open in WSL environments
-# https://superuser.com/a/1749811
-if [ -e "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
-    alias open=wslview
-fi
 #
 #
 #
