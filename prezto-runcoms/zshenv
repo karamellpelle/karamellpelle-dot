@@ -21,8 +21,9 @@ if uname -r|grep -iq 'Microsoft' ; then
 fi
 
 ################################################################################
-#
-export EDITOR="vim"
-export VISUAL="vim"
+# use NeoVim by default
+if [ -x "$(command -v nvim)" ]; then
+  alias vim=nvim
+  export GIT_EDITOR=nvim
+fi
 
-# TODO: if nvim: export GIT_EDITOR="nvim"

@@ -29,13 +29,6 @@ prompt powerlevel10k
 
 
 ################################################################################
-# use NeoVim by default
-if [ -x "$(command -v nvim)" ]; then
-  alias vim=nvim
-  export GIT_EDITOR=nvim
-fi
-
-################################################################################
 # if we have ghcup installed, add executables
 if [[ -n "$GHCUP_INSTALL_BASE_PREFIX" ]]; then
   path=(
@@ -46,6 +39,33 @@ if [[ -n "$GHCUP_INSTALL_BASE_PREFIX" ]]; then
 fi
 
 ################################################################################
+# use batman for man pages
+if [ -x "$(command -v batman)" ]; then
+  #alias man=batman
+  batman --export-env 
+fi
+
+
+################################################################################
+# 'open' command
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
+fi
+
+if [[ "$OSTYPE" == linux-gnu ]]; then
+  alias open=xdg-open
+  export BROWSER='xdg-open'
+fi
+
+# open in WSL environments
+# https://superuser.com/a/1749811
+if [ -e "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
+    alias open=wslview
+    export BROWSER='wslview'
+fi
+
+
+################################################################################
 #
 setopt completealiases
 
@@ -53,3 +73,5 @@ setopt completealiases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval $(thefuck --alias)

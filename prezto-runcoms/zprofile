@@ -9,23 +9,6 @@
 # Browser
 #
 
-# 'open' command
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-if [[ "$OSTYPE" == linux-gnu ]]; then
-  alias open=xdg-open
-  export BROWSER='xdg-open'
-fi
-
-# open in WSL environments
-# https://superuser.com/a/1749811
-if [ -e "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
-    alias open=wslview
-    export BROWSER='wslview'
-fi
-
 #
 # Editors
 #
@@ -63,15 +46,17 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
+GEM_HOME="$(gem env user_gemhome)"
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/.local/bin
   $HOME/.fzf/bin
-  #$HOME/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   /usr/lib/wsl/lib
   /mnt/c/Program Files/OpenSSH/
+  "$GEM_HOME/bin"         
   $path
 )
 

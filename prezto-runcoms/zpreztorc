@@ -39,8 +39,11 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'history-substring-search' \
+  'pacman' \
+  'git' \
   'prompt'
 
+  #'ssh' \ # TODO: see if this works well for Yubikeys
 #
 # Autosuggestions
 #
