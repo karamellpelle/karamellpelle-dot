@@ -42,7 +42,7 @@ fi
 # use batman for man pages
 if [ -x "$(command -v batman)" ]; then
   #alias man=batman
-  batman --export-env 
+  eval "$(batman --export-env)"
 fi
 
 
