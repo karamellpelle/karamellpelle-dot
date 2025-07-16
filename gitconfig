@@ -21,8 +21,8 @@
 #   whitespace = red reverse
 
 [core]
-    #pager = delta
-    pager = PAGER=less delta
+    pager = delta
+    #pager = PAGER=less delta
 
 [init]
     defaultBranch = main
@@ -33,9 +33,10 @@
 [delta]
     navigate = true    # use n and N to move between diff sections
     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = true      # side by side diffs
 
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
 [diff]
     colorMoved = default
