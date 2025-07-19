@@ -37,10 +37,11 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
+  'git' \
+  'pacman' \
+  'archive' \
   'completion' \
   'history-substring-search' \
-  'pacman' \
-  'git' \
   'prompt'
 
   #'ssh' \ # TODO: see if this works well for Yubikeys
