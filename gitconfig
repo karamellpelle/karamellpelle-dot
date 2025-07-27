@@ -53,3 +53,5 @@ ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(r
 #l = log --graph --oneline --decorate
 #ll = log --graph --oneline --decorate --branches --tags
 #lll = log --graph --oneline --decorate --all
+[pull]
+	ff = only
