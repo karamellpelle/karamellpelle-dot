@@ -51,6 +51,7 @@ GEM_HOME="$(gem env user_gemhome)"
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/.local/bin
+  $HOME/.ghcup/bin
   $HOME/.fzf/bin
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
