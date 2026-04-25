@@ -31,7 +31,7 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
-#
+    #
 #
 #
 #
@@ -46,7 +46,9 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-GEM_HOME="$(gem env user_gemhome)"
+if [ -x "$(command -v gem)" ]; then
+  GEM_HOME="$(gem env user_gemhome)"
+fi
 
 # Set the list of directories that Zsh searches for programs.
 path=(
