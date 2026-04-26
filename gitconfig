@@ -50,12 +50,14 @@
 [alias]
 l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
 ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
-	tree = !exec /home/karamellpelle/.local/share/gem/ruby/3.4.0/gems/git-status-tree-3.4.0/bin/git-status-tree
+tree = !exec ~/.local/share/gem/ruby/*/gems/git-status-tree-*/bin/git-status-tree
 #l = log --graph --oneline --decorate
 #ll = log --graph --oneline --decorate --branches --tags
 #lll = log --graph --oneline --decorate --all
 [pull]
 	ff = only
+
+# https://github.com/wteuber/git-status-tree
 [status-tree]
 	indent = 4
 	collapse = false
